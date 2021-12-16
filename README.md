@@ -18,7 +18,7 @@ states added in future.
 - Sending the log file after closing the program with a telegram bot **NOT IMPLEMENTED**
 #### Communication:
 Running the program on pi, will initialize the configuration file and check if the device is connected to the port or not. In case the Controller is connected to Pi, the Pi will send a hello signal to Controller, if the Controller is able to read the signal, it will respond to the Pi with the current state. Pi will create a new `log_file` (if user doesn't have one already) with a configuration data and will document the activity until the program is stopped manually or just exitted the scanning mode. 
-**The program will have the following menu:** 
+#### The program will have the following menu:
 | Choice | Functionality |
 | ------ | ------ |
 | Read Configuration | Read the configuration from the file |
