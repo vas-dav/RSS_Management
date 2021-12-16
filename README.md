@@ -27,5 +27,7 @@ Running the program on pi, will initialize the configuration file and check if t
 | Exit | Exits the program |
 
 > **Read Configuration** requires a JSON file with a name of the device, port number and a communication speed (baud)
+
 > **Enter Configuration Manually** allows to enter mentioned information manually without a config_file
+
 > **Enter Communication Mode** requires a configuration flag to enter. Can't be entered without a configuration. After the device is initialized, reads the initial state and writes/appends to the `log_file`. The mode closes the file and reopens it for appending only when the state has been changed again. This is made for the sake of autosaving the data. Mode can be ended with a press of 'q' character. The scanning is being run on a detached thread. 
