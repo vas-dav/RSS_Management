@@ -11,13 +11,13 @@ to it, so it would be acceptable for the particular course.
 states added in future. 
 - Indicator LED of a particular state for tail-end with a button
 - Indicating the current tempreature and humidity
-#### Pi side:
+#### Computer side:
 - Reading the change of the state coming from an Arduino connected via USB
-- Loading your configuration **JSON** file, see example [here]() //add later
-- Logging the state change during the program is running, see example [here]() //add later 
+- Loading your configuration **XML** file, see example [here](RSS_Management/cmake-build-debug/config.xml) 
+- Logging the state change during the program is running, see example [here](RSS_Management/cmake-build-debug/Log_File.txt) //add later 
 - Sending the log file after closing the program with a telegram bot **NOT IMPLEMENTED**
 ### Communication:
-Running the program on pi, will initialize the configuration file and check if the device is connected to the port or not. In case the Controller is connected to Pi, the Pi will send a hello signal to Controller, if the Controller is able to read the signal, it will respond to the Pi with the current state. Pi will create a new `log_file` (if user doesn't have one already) with a configuration data and will document the activity until the program is stopped manually or just exitted the scanning mode. 
+Running the program on a computer will read the configuration file and check if it is valid. In case the Controller is connected to Computer, the Computer will send a `#` message to Controller, if the Controller is able to read the signal, it will respond to the Computer. Computer will create a new `LOG_FL` (if user doesn't have one already) with a configuration data and will document the activity until the program is stopped manually or just exitted the **readMode**. 
 #### The program will have the following menu:
 | Choice | Functionality |
 | ------ | ------ |
@@ -26,7 +26,7 @@ Running the program on pi, will initialize the configuration file and check if t
 | Enter Communication Mode | Logging the activity to the file every time the state changes. |
 | Exit | Exits the program |
 
-> **Read Configuration** requires a JSON file with a name of the device, port number and a communication speed (baud)
+> **Read Configuration** requires a XML file with a name of the device, port number and a communication speed (baud)
 
 > **Enter Configuration Manually** allows to enter mentioned information manually without a config_file
 
