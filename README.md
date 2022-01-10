@@ -21,16 +21,36 @@ Running the program on a computer will read the configuration file and check if 
 #### The program will have the following menu:
 | Choice | Functionality |
 | ------ | ------ |
-| Read Configuration | Read the configuration from the file |
-| Enter Configuration Manually | If you don't have a config_file, the configuration can be entered manually |
-| Enter Communication Mode | Logging the activity to the file every time the state changes. |
+| Show LOG_FL | Show records |
+| Go in Read mode | Logging the activity to the file every time the state changes. |
+| Run device without reading | Running the device without reading |
+| Erase LOG_FL | Deletes the LOG_FL |
 | Exit | Exits the program |
 
-> **Read Configuration** requires a XML file with a name of the device, port number and a communication speed (baud)
 
-> **Enter Configuration Manually** allows to enter mentioned information manually without a config_file
+> **Enter Communication Mode** requires a configuration flag to enter. Can't be entered without a configuration. If configuration file > does not exit, program sets default values. The first thing, it runs `initDATA()` and only then starts the `infiniteRead()`: 
+```cpp
+  while (future.wait_for(chrono::milliseconds(1)) == future_status::timeout) {
+        return_char = read(file_dest, &data_buff, 1);
+        if (return_char != 0) {
+            data_tof.push_back(data_buff);
+            if(data_buff == ';'){
+                RSS_Parser pcr;
+                if (pcr.all_data(data_tof)){
+                    data_tof.erase();
+                    log << "State: {" << pcr.getState()
+                    << "} Temp: {" << pcr.getTemp() <<
+                    "C°} Humid: {" << pcr.getHumid() <<
+                    "%} at: "<< pcr.getTime() <<endl;
+                }
+            }
+        }
 
-> **Enter Communication Mode** requires a configuration flag to enter. Can't be entered without a configuration. After the device is initialized, reads the initial state and writes/appends to the `log_file`. The mode closes the file and reopens it for appending only when the state has been changed again. This is made for the sake of autosaving the data. Mode can be ended with a press of 'q' character. The scanning is being run on a detached thread. 
+    }
+```
+> Mode can be ended with a press of 'q' character. The scanning is being run on a detached thread. 
+
+[**RSS_Parser**](RSS_Management/src/RSS_Parser.cpp) class is made only for validating the data incoming from Microcontroller, since th e incoming format is `#[state]#[temp]#[humid];`. 
 
 
 #### Library usage: 
