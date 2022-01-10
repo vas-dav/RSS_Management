@@ -28,7 +28,7 @@ Running the program on a computer will read the configuration file and check if 
 | Exit | Exits the program |
 
 
-> **Go in Read mode** Can't be entered without a configuration. If configuration file > does not exit, program sets default values. The first thing, it runs `initDATA()` and only then starts the `infiniteRead()`: 
+> **Go in Read mode** Can't be entered without a configuration. If configuration file does not exit, program sets default values. The > first thing, it runs `initDATA()` and only then starts the `infiniteRead()`: 
 ```cpp
   while (future.wait_for(chrono::milliseconds(1)) == future_status::timeout) {
         return_char = read(file_dest, &data_buff, 1);
