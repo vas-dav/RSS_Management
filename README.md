@@ -1,4 +1,4 @@
-# RoomStateSensor
+# RoomStateSensor-Management
 ### Explanation:
 This project was made for one reason: to notify my rommmate about my availability. I built an easy circuit using Elegoo Uno and several sensors and  thought to present it to my teacher as an cplusplus project, which later on was declined as it is. Teacher, on the other hand suggested to add several features 
 to it, so it would be acceptable for the particular course. 
@@ -50,8 +50,11 @@ Running the program on a computer will read the configuration file and check if 
 ```
 > Mode can be ended with a press of 'q' character. The scanning is being run on a detached thread. 
 
-[**RSS_Parser**](RSS_Management/src/RSS_Parser.cpp) class is made only for validating the data incoming from Microcontroller, since th e incoming format is `#[state]#[temp]#[humid];`. 
+[**RSS_Parser.cpp**](RSS_Management/src/RSS_Parser.cpp) class is made only for validating the data incoming from Microcontroller, since the incoming format is:
+> `#[state]#[temp]#[humid];`. 
+
+[**SP.cpp**](RSS_Management/src/SP.cpp) class is made out using the library `SerialPort` linked below and modified it to a class with own functionality. 
 
 
 #### Library usage: 
-- [RS_232](https://gitlab.com/Teuniz/RS-232/-/tree/master)
+- [SerialPort](https://github.com/kleydon/Mac-SerialPort-Cpp/tree/master/*%20Project/MacSerialPort/SerialPort)
