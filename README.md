@@ -1,4 +1,5 @@
 # RoomStateSensor-Management
+
 ### Explanation:
 This project was made for one reason: to notify my rommmate about my availability. I built an easy circuit using Elegoo Uno and several sensors and  thought to present it to my teacher as an cplusplus project, which later on was declined as it is. Teacher, on the other hand suggested to add several features 
 to it, so it would be acceptable for the particular course. 
