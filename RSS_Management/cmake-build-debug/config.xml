@@ -1,0 +1,5 @@
+<configuration>
+    <name>RoomStateSensor[RSS] (v1.0)</name>
+    <port>/dev/tty.usbmodem14101</port>
+    <baudrate>57600</baudrate>
+</configuration>

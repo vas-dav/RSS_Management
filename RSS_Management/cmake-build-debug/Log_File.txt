@@ -1,0 +1,14 @@
+LOG_FL created Sun Jan  9 20:26:16 2022
+
+State: {Currently Home} Temp: {23.00C°} Humid: {33.00%} at: Sun Jan  9 20:26:31 2022
+
+State: {Not Home} Temp: {22.60C°} Humid: {34.00%} at: Sun Jan  9 20:26:46 2022
+
+State: {Currently Home} Temp: {22.70C°} Humid: {32.00%} at: Sun Jan  9 20:45:37 2022
+
+State: {Currently Busy} Temp: {19.00C°} Humid: {19.00%} at: Mon Jan 10 12:53:47 2022
+
+State: {Come In!} Temp: {20.70C°} Humid: {16.00%} at: Mon Jan 10 12:56:11 2022
+
+State: {Currently Busy} Temp: {23.20C°} Humid: {11.00%} at: Mon Jan 10 13:09:56 2022
+

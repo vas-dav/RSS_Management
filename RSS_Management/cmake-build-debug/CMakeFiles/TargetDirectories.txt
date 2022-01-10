@@ -1,0 +1,3 @@
+/Users/VFilms/Desktop/IT/C-code/RSS_Management/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/VFilms/Desktop/IT/C-code/RSS_Management/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/VFilms/Desktop/IT/C-code/RSS_Management/cmake-build-debug/CMakeFiles/RSS_Management.dir
