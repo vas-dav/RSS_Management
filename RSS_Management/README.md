@@ -1,3 +1,7 @@
+### Explanation:
+This project was made for one reason: to notify my rommmate about my availability. I built an easy circuit using Elegoo Uno and several sensors and  thought to present it to my teacher as an cplusplus project, which later on was declined as it is. Teacher, on the other hand suggested to add several features 
+to it, so it would be acceptable for the particular course. 
+
 ### Communication:
 Running the program on a computer will read the configuration file and check if it is valid. In case the Controller is connected to Computer, the Computer will send a `#` message to Controller, if the Controller is able to read the signal, it will respond to the Computer. Computer will create a new `LOG_FL` (if user doesn't have one already) with a configuration data and will document the activity until the program is stopped manually or just exitted the **readMode**. 
 #### The program will have the following menu:
