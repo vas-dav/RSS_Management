@@ -5,7 +5,7 @@ This project was made for one reason: to notify my rommmate about my availabilit
 to it, so it would be acceptable for the particular course. 
 
 ### Features: 
-#### [Controller side](RSS_Management/RoomyState): 
+#### [Controller side](https://github.com/vas-dav/RSS_Management/tree/main/RoomyState): 
 - User has for states of a room: **Busy;Home;Come;Away** (Can be found in the [file](RoomyState/lcd.cpp))
 - Each state is controllable with a **button** included in the circuit
 - When the **button** is pressed, it communicates with a [**Counter class**](RoomyState/Counter.h), which has an overflow feature making it really scalable for more 
