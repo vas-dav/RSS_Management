@@ -12,7 +12,7 @@ to it, so it would be acceptable for the particular course.
 states added in future. 
 - Indicator LED of a particular state for tail-end with a button
 - Indicating the current tempreature and humidity
-#### [Computer side](RSS_Management/RSS_Management):
+#### [Computer side](https://github.com/vas-dav/RSS_Management/tree/main/RSS_Management):
 - Reading the change of the state coming from an Arduino connected via USB
 - Loading your configuration **XML** file, see example [here](RSS_Management/cmake-build-debug/config.xml) 
 - Logging the state change during the program is running, see example [here](RSS_Management/cmake-build-debug/Log_File.txt) 
